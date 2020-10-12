@@ -1,8 +1,8 @@
 import React from 'react';
 
 class Item extends React.Component {
-    delete = () => {
-        this.props.delete(this.props.nr);
+    deleteItem = () => {
+        this.props.deleteItem(this.props.nr);
     } 
 
     render() {
@@ -10,7 +10,7 @@ class Item extends React.Component {
 
         return ( 
             <li>
-                <span>{value} {currency}</span> <span onClick={this.delete}>X</span>
+                <span>{value} {currency}</span> <span onClick={this.deleteItem}>X</span>
             </li>
         );
     }
